@@ -1,6 +1,6 @@
 class Translation(object):
     START_TEXT = """Hello,
-This is a Telegram Rename Bot!
+This is a Telegram Rename Bot by [PROFESSOR](https://t.me/TheUnusualPsychopath)
 
 <b>Please send me any Telegram file and reply to that file with /rename New Name.mkv</b>
 
@@ -11,7 +11,7 @@ This is a Telegram Rename Bot!
     DOWNLOAD_START = "Downloading..."
     UPLOAD_START = "Uploading..."
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.5GB due to Telegram API limitations."
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "**Thank you for Using professor's bot.**"
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "**Thank you for Using [PROFESSOR](https://t.me/TheUnusualPsychopath)'s bot.**"
     AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds.\nUploaded in {} seconds."
     NOT_AUTH_USER_TEXT = "Please /upgrade your subscription."
     NOT_AUTH_USER_TEXT_FILE_SIZE = "Detected File Size: {}. Free Users can only upload: {}\nPlease /upgrade your subscription.\nIf you think this is a bug, please contact <a href='https://telegram.dog/ThankTelegram'>@SpEcHlDe</a>"
@@ -24,8 +24,9 @@ This is a Telegram Rename Bot!
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
     HELP_USER = """Hai am Rename bot..
     
-1. Send me any Telegram File.
-2. Reply to that message to /rename new name.extension.
+1. Send Me A Thumbnail.
+2. Send me the file to be Renamed.
+3. Reply to that message to /rename new name.extension.
    
 <b>👉 Thank to professor :</b> 👉 <a href="https://t.me/TheUnusualPsychopath">Owner</a>
 
