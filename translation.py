@@ -1,6 +1,6 @@
 class Translation(object):
     START_TEXT = """Hello,
-This is a Telegram Rename Bot by [PROFESSOR](https://t.me/TheUnusualPsychopath)
+This is a Telegram Rename Bot made by [PROFESSOR](t.me/TheUnusualPsychopath)
 
 <b>Please send me any Telegram file and reply to that file with /rename New Name.mkv</b>
 
@@ -28,12 +28,12 @@ This is a Telegram Rename Bot by [PROFESSOR](https://t.me/TheUnusualPsychopath)
 2. Send me the file to be Renamed.
 3. Reply to that message to /rename new name.extension.
    
-<b>👉 Thank to professor :</b> 👉 <a href="https://t.me/TheUnusualPsychopath">Owner</a>
+<b>👉 Thank to PROFESSOR :</b> 👉 <a href="https://t.me/TheUnusualPsychopath">Owner</a>
 
 --------
 
 Support Group : @Brotherwoodfilmz
-© @SeriesLand4U"""
+| @SeriesLand4U"""
     REPLY_TO_DOC_FOR_RENAME_FILE = "Reply to a Telegram media to `/rename New Name.extension` with custom thumbnail support.."
     ABUSIVE_USERS = "You are not allowed to use this bot. If you think this is a mistake, please check /me to remove this restriction."
     FREE_USER_LIMIT_Q_SZE = """Cannot Process.
