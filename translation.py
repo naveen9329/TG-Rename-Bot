@@ -6,7 +6,7 @@ This is a Telegram URL Upload Bot!
 
 Thanks to @InFoTelGroup , @SpEcHlDe , @TGBotsZ , & @CWProjects
 
-Special Thanks to <b> @ViruZs , @TheUnusualPsychopath
+Special Thanks to <b> @ViruZs , @TheUnusualPsychopath </b>
 
 [My Master 🙎‍♂️](buttonurl:https://t.me/Anonymous9329)"""
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
