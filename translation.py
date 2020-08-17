@@ -8,7 +8,11 @@ Thanks to @InFoTelGroup , @SpEcHlDe , @TGBotsZ , & @CWProjects
 
 Special Thanks to <b> @ViruZs , @TheUnusualPsychopath </b>
 
-Inlinekeyboardbutton('My Master 🙎‍♂️',url='https://t.me/Anonymous9329')"""
+quote=True,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                    InlineKeyboardButton('My Master 🙎‍♂️',url='https://t.me/Anonymous9329')
+            ]"""
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
     UPGRADE_TEXT = "Hi 🤪"
