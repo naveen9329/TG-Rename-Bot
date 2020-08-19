@@ -8,14 +8,14 @@ Created by <a href='https://t.me/anonymous9329'>My Father 👨‍💻</a>
     """
     ABS_TEXT = " Please don't be selfish."
     BANNED_USER_TEXT = "you are banned 🚫. Because you misused me. Please as my boss @anonymous9329 in the <a href='https://t.me/anonymousbotsupporte'>Discussion group 🗣</a>.Don't pm him"
-    UPGRADE_TEXT = "No upgrade plan 🥰"
-    DOWNLOAD_START = "trying to download"
-    UPLOAD_START = "trying to upload"
+    UPGRADE_TEXT = "No upgrade plan 🥰. You are free for now"
+    DOWNLOAD_START = "trying to download to my server....📥"
+    UPLOAD_START = "Started to convert as Video 📹"
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
     AFTER_SUCCESSFUL_UPLOAD_MSG = "https://t.me/fileConvertRobot"
     AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \nPlease rate me if you find me useful. https://t.me/tlgrmcbot?start=anydl_bot-bot \nUploaded in {} seconds."
     NOT_AUTH_USER_TEXT = "Please /upgrade your subscription."
-    SAVED_CUSTOM_THUMB_NAIL = "Custom video / file thumbnail saved. This image will be used in next 24 hr"
+    SAVED_CUSTOM_THUMB_NAIL = "✅ Custom video or file thumbnail saved. This image will be used in next 24 hr. Now enjoy the bot 🤖 with you thumbnail"
     DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared succesfully."
     FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "✅ Media cleared succesfully."
     SAVED_RECVD_DOC_FILE = "Document Downloaded Successfully."
@@ -24,9 +24,14 @@ Created by <a href='https://t.me/anonymous9329'>My Father 👨‍💻</a>
     CURENT_PLAN_DETAILS = """There is no plan till now you are free to use me 🤩"""
     HELP_USER = """Hi there. I can convert telegram file to video
 How to use me :
+
 Step-1👉 Forward the file which you wanted to convert as streamable video 
+
 Step-2👉Reply to the message as /converttovideo.
+(Long press on the file which you need to convert and check the left bottom you can find reply button)
+
 Thanks to @TGBotsz, @InFoTelGroup 
+
 special thanks to @viruZs and @TheUnusualPsychopath
 
 
