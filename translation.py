@@ -1,20 +1,17 @@
 class Translation(object):
     START_TEXT = """Hello,
 This is a Telegram URL Upload Bot!
-I can upload direct link to telegram without using your data
+
+I can upload direct link to telegram without using your data (📁 file limit is 1.95GB)
+
+If you are looking for making splitted files or you want to upload files more than 1.95GB use <a href='https://t.me/anonymousleechgroup'>leech group</a>
 
 Special thanks to @virZs
-quote=True,
-reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton('Source 😒', url='https://github.com/odysseusmax/animated-lamp'),
-                    InlineKeyboardButton('Project Channel', url='https://t.me/odbots')
-                ],
-                [
-                    InlineKeyboardButton('My Father', url='https://t.me/odysseusmax')
-                ]
-            ]
+
+
+<b><a href='https://t.me/anonymous9329'>My Father 👨‍💻 </a></b>
+
+<b><a href='https://t.me/anonymousleechgroup'>Discuss 🗣</a></b>
 """
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
