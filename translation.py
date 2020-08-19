@@ -11,7 +11,9 @@ Special thanks to @virZs
 
 <b><a href='https://t.me/anonymous9329'>My Father 👨‍💻 </a></b>
 
-<b><a href='https://t.me/anonymousleechgroup'>Discuss 🗣</a></b>
+<b><a href='https://t.me/anonymousbotsupporte'>Discuss 🗣</a></b>
+
+
 """
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
