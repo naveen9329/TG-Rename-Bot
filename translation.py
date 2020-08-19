@@ -20,7 +20,7 @@ You can convert any Telegram Document, using this bot! With custom thumbnail
     CUSTOM_CAPTION_UL_FILE = ""
     NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found.😔"
     CURENT_PLAN_DETAILS = """There is no plan till now you are free to use me 🤩"""
-    HELP_USER = """Hi there. I can convert telegram file to video
+    HELP_USER = """Hi there {m.from_user.first_name} . I can convert telegram file to video
 How to use me :/nStep-1👉 Forward the file which you wanted to convert as streamable video 
 /nStep-2👉Reply to the message as /converttovideo.
 /nThanks to @TGBotsz, @InFoTelGroup /special thanks to @viruZs and @TheUnusualPsychopath
