@@ -35,4 +35,4 @@ special thanks to @viruZs and @TheUnusualPsychopath
 Discuss with us in <a href='https://t.me/anonymousbotsupporte'>Discussion group 🗣</a></b>
 """
 
-    REPLY_TO_DOC_FOR_C2V = "🤦‍♂️ Reply to a Telegram media to convert."
+    REPLY_TO_DOC_FOR_C2V = "🤦‍♂️ Reply to a Telegram media to convert.Don't you know how to reply please check /help"
