@@ -1,8 +1,10 @@
 class Translation(object):
     START_TEXT = """Hello,
-This is a telegram convert bot
+This is a telegram file to streamable video converter bot
+
 You can convert any Telegram Document, using this bot! With custom thumbnail
-     
+
+Created by <a href='https://t.me/anonymous9329'>My Father 👨‍💻</a>
     """
     ABS_TEXT = " Please don't be selfish."
     BANNED_USER_TEXT = "you are banned 🚫. Because you misused me. Please as my boss @anonymous9329 in the <a href='https://t.me/anonymousbotsupporte'>Discussion group 🗣</a>.Don't pm him"
@@ -20,11 +22,17 @@ You can convert any Telegram Document, using this bot! With custom thumbnail
     CUSTOM_CAPTION_UL_FILE = ""
     NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found.😔"
     CURENT_PLAN_DETAILS = """There is no plan till now you are free to use me 🤩"""
-    HELP_USER = """Hi there {m.from_user.first_name} . I can convert telegram file to video
-How to use me :/nStep-1👉 Forward the file which you wanted to convert as streamable video 
-/nStep-2👉Reply to the message as /converttovideo.
-/nThanks to @TGBotsz, @InFoTelGroup /special thanks to @viruZs and @TheUnusualPsychopath
-/n/n/n<b>I am created by <a href='https://t.me/anonymous9329'>My Father 👨‍💻</a>/nDiscuss with us in <a href='https://t.me/anonymousbotsupporte'>Discussion group 🗣</a></b>
+    HELP_USER = """Hi there. I can convert telegram file to video
+How to use me :
+Step-1👉 Forward the file which you wanted to convert as streamable video 
+Step-2👉Reply to the message as /converttovideo.
+Thanks to @TGBotsz, @InFoTelGroup 
+special thanks to @viruZs and @TheUnusualPsychopath
+
+
+
+<b>I am created by <a href='https://t.me/anonymous9329'>My Father 👨‍💻</a>
+Discuss with us in <a href='https://t.me/anonymousbotsupporte'>Discussion group 🗣</a></b>
 """
 
     REPLY_TO_DOC_FOR_C2V = "🤦‍♂️ Reply to a Telegram media to convert."
