@@ -1,21 +1,11 @@
 class Translation(object):
     START_TEXT = """Hello,
 This is a Telegram URL Upload Bot!
-await m.reply_text(
-        text=f"Hi there {m.from_user.first_name}.\n\nI'm Screenshot Generator Bot. I can provide screenshots from your video files with out downloading the entire file (almost instantly). For more details check /help.",
-        quote=True,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton('Source 😒', url='https://github.com/odysseusmax/animated-lamp'),
-                    InlineKeyboardButton('Project Channel', url='https://t.me/odbots')
-                ],
-                [
-                    InlineKeyboardButton('My Father', url='https://t.me/odysseusmax')
-                ]
-            ]
-        )
-    )
+I can upload direct link to telegram without using your data
+
+Special thanks to @viruZs
+
+<a href='https://t.me/anonymous'>My Father 👨‍💻</a>
 """
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
