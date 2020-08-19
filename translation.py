@@ -1,6 +1,6 @@
 class Translation(object):
     START_TEXT = """Hello,
-This is a 
+This is a telegram convert bot
 You can convert any Telegram Document, using this bot! With custom thumbnail
      
     """
