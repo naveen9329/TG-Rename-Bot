@@ -3,10 +3,20 @@ class Translation(object):
 This is a Telegram URL Upload Bot!
 I can upload direct link to telegram without using your data
 
-Special thanks to @viruZs
-
-<a href='https://t.me/anonymous'>My Father 👨‍💻</a>
-"""
+Special thanks to @virZs
+"""quote=True,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton('Source 😒', url='https://github.com/odysseusmax/animated-lamp'),
+                    InlineKeyboardButton('Project Channel', url='https://t.me/odbots')
+                ],
+                [
+                    InlineKeyboardButton('My Father', url='https://t.me/anonymous9329')
+                ]
+            ]
+        )
+    )
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
     UPGRADE_TEXT = "Hi 🤪 there is no upgrade plane till now ot may add in future"
