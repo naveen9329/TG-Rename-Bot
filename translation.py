@@ -27,5 +27,4 @@ How to use me :/nStep-1👉 Forward the file which you wanted to convert as stre
 /n/n/n<b>I am created by <a href='https://t.me/anonymous9329'>My Father 👨‍💻</a>/nDiscuss with us in <a href='https://t.me/anonymousbotsupporte'>Discussion group 🗣</a></b>
 """
 
-    REPLY_TO_DOC_FOR_C2V = "🤦‍♂️ Reply to a Telegram media to convert. Check /help for more info /n Don't u know 🤷‍♂️ where reply button is press no problem follow this
-/nStep-1 : long press on the file which you need to convert /nStep-2 Check the left bottom there you can find reply"
+    REPLY_TO_DOC_FOR_C2V = "🤦‍♂️ Reply to a Telegram media to convert."
