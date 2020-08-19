@@ -4,6 +4,7 @@ This is a Telegram URL Upload Bot!
 I can upload direct link to telegram without using your data
 
 Special thanks to @virZs
+quote=True,
 reply_markup=InlineKeyboardMarkup(
             [
                 [
