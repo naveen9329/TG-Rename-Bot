@@ -59,7 +59,6 @@ async def get_me_info(bot, update):
         reply_to_message_id=update.message_id
     )
 
-
 @pyrogram.Client.on_message(pyrogram.Filters.command(["start"]))
 async def start(bot, update):
     # logger.info(update)
