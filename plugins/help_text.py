@@ -53,10 +53,11 @@ async def get_me_info(bot, update):
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.CURENT_PLAN_DETAILS.format(chat_id, plan_type, expires_at),
-        parse_mode="html",
+        parse_mode="html", 
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
     )
+
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["start"]))
 async def start(bot, update):
@@ -65,10 +66,7 @@ async def start(bot, update):
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.START_TEXT,
-        disable_web_page_preview=True,
         reply_to_message_id=update.message_id
-    	    )
-© 2020 GitHub, Inc.
     )
 
 
