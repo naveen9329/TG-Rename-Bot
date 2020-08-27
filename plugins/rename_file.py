@@ -37,13 +37,11 @@ from PIL import Image
 async def rename_doc(bot, update):
     user_details = bot.get_chat_member("@Zed1Projctz", chat_id=update.chat.id)
     try:
-       user_details 
-    except UserNotParticipant:
-        if edit_message:
-              button = [[InlinekeyboardButton ('join our channrl',url=https://t.me/Zed1Projctz)]]
-              markup = Inlinekeyboardmarkup(button)
-              await reply("""you need to join the channel inorder to use the bot  
-              PLZ join channel and enjoy bot🤓"""reply_markup=markup)
+        user_details 
+    except:
+        await bot.send_message(
+             text="join our channel", 
+             disable_web_page_preview=True
         )
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
