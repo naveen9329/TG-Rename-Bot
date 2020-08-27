@@ -35,9 +35,9 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
-    bot.get_chat_member("@Zed1Projctz", chat_id=update.chat.id)
+    user_details = bot.get_chat_member("@Zed1Projctz", chat_id=update.chat.id)
     try:
-       get users details
+       user_details 
     except UserNotParticipant:
         if edit_message=
               button = [[InlinekeyboardButton ('join our channrl',url=https://t.me/Zed1Projctz)]]
