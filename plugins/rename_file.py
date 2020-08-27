@@ -43,7 +43,7 @@ async def rename_doc(bot, update):
         )
         return
     TRChatBase(update.from_user.id, update.text, "rename")
-    user_details=bot.get_chat_member("@Zed1Projctz", update.user.id)
+    user_details=bot.get_chat_member("@Zed1Projctz", update.from_user.id)
     try:
         user_details
     except:
