@@ -23,7 +23,6 @@ from translation import Translation
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram import Client, Filters
-from pyrogram.errors import BadRequest
 
 from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import progress_for_pyrogram
@@ -42,12 +41,7 @@ async def rename_doc(bot, update):
             message_ids=update.message_id,
             revoke=True
         )
-        return
-    c = -1001256560497
-    try:
-       member = await bot.get_chat_member(c, update.from_user.id)
-    except BadRequest:
-              print("nibba")
+         return
     TRChatBase(update.from_user.id, update.text, "rename")
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
