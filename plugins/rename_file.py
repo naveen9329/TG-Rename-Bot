@@ -39,7 +39,7 @@ async def rename_doc(bot, update):
     try:
        user_details 
     except UserNotParticipant:
-        if edit_message=
+        if edit_message:
               button = [[InlinekeyboardButton ('join our channrl',url=https://t.me/Zed1Projctz)]]
               markup = Inlinekeyboardmarkup(button)
               await reply("""you need to join the channel inorder to use the bot  
