@@ -55,11 +55,6 @@ async def rename_doc(bot, update):
             return
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
-        user_details = bot.get_chat_member("@Zed1Projctz", update.from_user.id)
-    try:
-        user_details
-    except:
-        print("Join")
         a = await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.DOWNLOAD_START,
