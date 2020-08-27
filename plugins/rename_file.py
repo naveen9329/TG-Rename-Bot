@@ -23,6 +23,7 @@ from translation import Translation
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram import Client, Filters
+from pyrogram.errors import BadRequest
 
 from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import progress_for_pyrogram
@@ -35,6 +36,12 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
+    from pyrogram.errors import BadRequest
+    c = -1001256560497
+    try:
+       member = await userge.get_chat_member(c, message.from_user.id)
+    except BadRequest:
+              print("nibba")
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
