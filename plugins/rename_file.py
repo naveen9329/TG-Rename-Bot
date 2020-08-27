@@ -22,7 +22,7 @@ from translation import Translation
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
-from pyrogram import Client, Filters, UserNotParticipant
+from pyrogram import Client, Filters
 
 from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import progress_for_pyrogram
@@ -46,7 +46,7 @@ async def rename_doc(bot, update):
     user_details = bot.get_chat_member("@Zed1Projctz", update.chat.id)
     try:
         user_details 
-    except UserNotParticipant:
+    except:
         await bot.send_message(
              text="join our channel", 
              disable_web_page_preview=True
