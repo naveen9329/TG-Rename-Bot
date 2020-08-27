@@ -39,7 +39,7 @@ async def rename_doc(bot, update):
     from pyrogram.errors import BadRequest
     c = -1001256560497
     try:
-       member = await userge.get_chat_member(c, message.from_user.id)
+       member = await bot.get_chat_member(c, update.from_user.id)
     except BadRequest:
               print("nibba")
     if update.from_user.id in Config.BANNED_USERS:
