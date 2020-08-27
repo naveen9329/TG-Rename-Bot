@@ -43,13 +43,7 @@ async def rename_doc(bot, update):
         )
         return
     TRChatBase(update.from_user.id, update.text, "rename")
-    user_details=bot.get_chat_member("@Zed1Projctz", update.from_user.id)
-    try:
-        user_details
-    except:
-        print("Join")
-       
-    if (" " in update.text) and (update.reply_to_message is not None):
+      if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
         if len(file_name) > 64:
             await update.reply_text(
