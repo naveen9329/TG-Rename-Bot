@@ -35,7 +35,7 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
-    user_details = bot.get_chat_member("@Zed1Projctz", chat_id=update.chat.id)
+    user_details = bot.get_chat_member("@Zed1Projctz", update.chat.id)
     try:
         user_details 
     except:
