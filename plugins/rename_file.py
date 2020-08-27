@@ -35,6 +35,12 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
+    check_status = bot.get_chat_member("-1001292933413",update.from_user.id)
+    admin_strings = ["member"]
+    if check_status.status in admin_strings:
+        return True
+    else:
+        await bot.send_message("join)
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
@@ -50,12 +56,6 @@ async def rename_doc(bot, update):
                 Translation.IFLONG_FILE_NAME.format(
                     alimit="64",
                     num=len(file_name)
-    check_status = bot.get_chat_member("-1001292933413",update.from_user.id)
-    admin_strings = ["member"]
-    if check_status.status in admin_strings:
-        return True
-    else:
-        print("join")
                 )
             )
             return
