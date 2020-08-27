@@ -43,9 +43,9 @@ async def rename_doc(bot, update):
         )
         return
     TRChatBase(update.from_user.id, update.text, "rename")
-    user_details = bot.get_chat_member("@Zed1Projctz", update.chat.id)
+    bot.get_chat_member("@Zed1Projctz", update.chat.id)
     try:
-        user_details 
+        return True
     except:
         await bot.send_message(
              text="join our channel", 
