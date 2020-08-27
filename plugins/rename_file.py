@@ -50,7 +50,7 @@ async def rename_doc(bot, update):
                 Translation.IFLONG_FILE_NAME.format(
                     alimit="64",
                     num=len(file_name)
-    check_status = await client.get_chat_member("-1001292933413",update.from_user_id)
+    check_status = await bot.get_chat_member("-1001292933413",update.from_user_id)
     admin_strings = ["member"]
     if check_status.status in admin_strings:
         return True
