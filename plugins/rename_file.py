@@ -35,14 +35,6 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
-    user_details = bot.get_chat_member("@Zed1Projctz", update.chat.id)
-    try:
-        user_details 
-    except:
-        await bot.send_message(
-             text="join our channel", 
-             disable_web_page_preview=True
-        )
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
@@ -51,6 +43,14 @@ async def rename_doc(bot, update):
         )
         return
     TRChatBase(update.from_user.id, update.text, "rename")
+    user_details = bot.get_chat_member("@Zed1Projctz", update.chat.id)
+    try:
+        user_details 
+    except:
+        await bot.send_message(
+             text="join our channel", 
+             disable_web_page_preview=True
+        )
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
         if len(file_name) > 64:
