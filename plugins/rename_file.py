@@ -40,7 +40,7 @@ async def rename_doc(bot, update):
     if check_status.status in admin_strings:
         return True
     else:
-        await bot.send_message("join)
+        await bot.send_message("join")
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
