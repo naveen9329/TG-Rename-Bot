@@ -39,12 +39,12 @@ async def rename_doc(bot, update):
         await bot.delete_messages(
             chat_id=update.chat.id,
             message_ids=update.message_id,
-            revoke=True
-    user_details = bot.get_chat_member("@Zed1Projctz", update.from_user.id)
-    try:
-        user_details
-    except:
-        print("Join")
+            revoke=True, 
+            user_details = bot.get_chat_member("@Zed1Projctz", update.from_user.id)
+               try:
+                  user_details
+               except:
+                  print("Join")
         
         return
     TRChatBase(update.from_user.id, update.text, "rename")
