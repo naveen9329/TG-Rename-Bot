@@ -36,7 +36,6 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
-    from pyrogram.errors import BadRequest
     c = -1001256560497
     try:
        member = await bot.get_chat_member(c, update.from_user.id)
