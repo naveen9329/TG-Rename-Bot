@@ -47,8 +47,6 @@ async def rename_doc(bot, update):
     if check_status.status not in admin_strings:
         await bot.send_message("Join Channel")
         return
-    elif:
-        return True
     elif update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
