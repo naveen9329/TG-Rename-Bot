@@ -47,10 +47,8 @@ async def rename_doc(bot, update):
     try:
         return True
     except:
-        await bot.send_message(
-             text="join our channel", 
-             disable_web_page_preview=True
-        )
+        print("Join")
+       
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
         if len(file_name) > 64:
