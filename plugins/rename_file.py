@@ -161,8 +161,8 @@ async def rename_doc(bot, update):
             reply_to_message_id=update.message_id
         )
      
- except:
-    await bot.send_message(
-     chat_id=update.chat.id,
-     text="Join My Channel To Use This Bot"
-)
+    except:
+        await bot.send_message(
+           chat_id=update.chat.id,
+           text="Join My Channel To Use This Bot"
+        )
