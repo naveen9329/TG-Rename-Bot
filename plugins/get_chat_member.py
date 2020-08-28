@@ -30,13 +30,10 @@ async def rename_doc(bot, update):
             return True
 
     except UserNotParticipant:
-        if edit_message:
             await reply("Join @Zed1Projctz To Use Me")
     except UserBannedInChannel:
-        if edit_message:
                 await reply("You are Banned😌")
     except Exception:
         LOGGER.exception("Unable to verify user")
-        if edit_message:
                 await reply("Something wenr Wrong 😴")
     return False
