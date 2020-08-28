@@ -17,3 +17,26 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram import Client, Filters, ChatPermissions
 from pyrogram import InlineKeyboardMarkup, InlineKeyboardButton
 import pyrogram.errors
+
+@pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
+async def rename_doc(bot, update):
+    try:
+        chat = await bot.get_chat_member("@Zed1Projctz", update.chat.id)
+        if chat.status=='kicked':
+            if edit_message:
+                await reply("You are Banned😌")
+            return False
+        else:
+            return True
+
+    except UserNotParticipant:
+        if edit_message:
+            await reply("Join @Zed1Projctz To Use Me")
+    except UserBannedInChannel:
+        if edit_message:
+                await reply("You are Banned😌")
+    except Exception:
+        LOGGER.exception("Unable to verify user")
+        if edit_message:
+                await reply("Something wenr Wrong 😴")
+    return False
