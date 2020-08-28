@@ -35,5 +35,5 @@ async def rename_doc(bot, update):
                 await reply("You are Banned😌")
     except Exception:
         LOGGER.exception("Unable to verify user")
-                await reply("Something wenr Wrong 😴")
+        await reply("Something wenr Wrong 😴")
     return False
