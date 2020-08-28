@@ -37,21 +37,6 @@ from database.database import *
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
-    try:
-        chat = await app.get_chat_member("@Zed1Projctz", update.chat.id)
-        if edit_message:
-            button = [[InlineKeyboradButton('join projct chnll',url='https://t.me/Zed1Projctz')]]
-            markup = InlineKeyboardMarkup(button)
-            await reply("""Need to join channel""")
-    except UserbannedInChannel:
-       if edit_message:
-            await reply('you are banned!')
-    except Exception:
-       Logger.exception('Unable to Verify')
-       if edit_message:
-            await reply('smthng wrong when checking user')
-    return False
-
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
         return
