@@ -16,7 +16,7 @@ import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram import Client, Filters, ChatPermissions
 from pyrogram import InlineKeyboardMarkup, InlineKeyboardButton
-import pyrogram.errors
+from pyrogram.errors import UserNotParticipant, UserBannedInChannel, Exception 
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
