@@ -35,19 +35,7 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
-    user_id = update.from_user.id
-
-    check_status = await bot.get_chat_member(
-        "-1001256560497", 
-        user_id=user_id
-    )
-    admin_strings = [
-        "member"
-    ]
-    if check_status.status not in admin_strings:
-        await bot.send_message("Join Channel")
-        return
-    elif update.from_user.id in Config.BANNED_USERS:
+    if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
             message_ids=update.message_id,
