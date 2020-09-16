@@ -147,6 +147,7 @@ async def rename_doc(bot, update):
     
 @pyrogram.Client.on_message(pyrogram.Filters.command(["showthumbnail"]))
 async def show_thumbnail(bot, update):
+    global thumb_image_path
     thumb_image = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
     if not os.path.exists(thumb_image_path):
        mes = await get_thumb(update.from_user.id)
