@@ -129,7 +129,7 @@ async def rename_doc(bot, update):
             )
             try:
                 os.remove(new_file_name)
-                os.remove(thumb_image_path)
+                #os.remove(thumb_image_path)
             except:
                 pass
             await bot.edit_message_text(
@@ -156,5 +156,8 @@ async def show_thumbnail(bot, update):
         )
         return
     if update.from_user.id not in Config.BANNED_USERS:
+       if thumb_image is not None:
          await bot.send_photo(chat_id=update.chat.id, photo=thumb_image)
+       if thumb_image is None:
+         await update.reply_text("No thumbnail found 🤷‍♂️")
 
