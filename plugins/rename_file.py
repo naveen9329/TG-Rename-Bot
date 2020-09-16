@@ -143,20 +143,11 @@ async def rename_doc(bot, update):
             chat_id=update.chat.id,
             text=Translation.REPLY_TO_DOC_FOR_RENAME_FILE,
             reply_to_message_id=update.message_id
-        )
+        )return thumb_image_path
     
 @pyrogram.Client.on_message(pyrogram.Filters.command(["showthumbnail"]))
 async def show_thumbnail(bot, update):
-    
-    thumb_image = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
-    if not os.path.exists(thumb_image_path1):
-       mes = await get_thumb(update.from_user.id)
-       if mes != None:
-            m = await bot.get_messages(update.chat.id, mes.msg_id)
-            await m.download(file_name=thumb_image_path1)
-            thumb_image_path = thumb_image_path1
-       else:
-          thumb_image_path = None
+    global thumb_image_path
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
