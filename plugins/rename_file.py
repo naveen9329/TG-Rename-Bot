@@ -143,7 +143,8 @@ async def rename_doc(bot, update):
             chat_id=update.chat.id,
             text=Translation.REPLY_TO_DOC_FOR_RENAME_FILE,
             reply_to_message_id=update.message_id
-        )return thumb_image_path
+        )
+ return thumb_image_path
     
 @pyrogram.Client.on_message(pyrogram.Filters.command(["showthumbnail"]))
 async def show_thumbnail(bot, update):
