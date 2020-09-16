@@ -6,7 +6,7 @@ async def show_thumbnail(bot, update):
        if mes != None:
           m = await bot.get_messages(update.chat.id, mes.msg_id)
           await m.download(file_name=thumb_image_path)
-       thumb_image_path = thumb_image_path
+          thumb_image_path = thumb_image_path
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
