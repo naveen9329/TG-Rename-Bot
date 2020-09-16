@@ -137,17 +137,5 @@ async def delete_thumbnail(bot, update):
         text=Translation.DEL_ETED_CUSTOM_THUMB_NAIL,
         reply_to_message_id=update.message_id
     )
-@pyrogram.Client.on_message(pyrogram.Filters.command(["showthumbnail"]))
-async def show_thumbnail(bot, update):
-    if update.from_user.id in Config.BANNED_USERS:
-        await bot.delete_messages(
-            chat_id=update.chat.id,
-            message_ids=update.message_id,
-            revoke=True
-        )
-        return
-    if update.from_user.id not in Config.BANNED_USERS:
-         await bot.send_photo(photo=save_final_image)
-
 
 
