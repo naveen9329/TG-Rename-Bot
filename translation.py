@@ -1,5 +1,5 @@
 class Translation(object):
-    START_TEXT = """Hello {},
+    START_TEXT = """Hello 
 This is a Telegram Rename Bot made by @TheUnusualPsychopath.
 
 <b>Please send me any Telegram file and reply to that file with /rename New Name.mkv</b>
