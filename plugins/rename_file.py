@@ -147,7 +147,7 @@ async def rename_doc(bot, update):
     return thumb_image_path
 @pyrogram.Client.on_message(pyrogram.Filters.command(["showthumbnail"]))
 async def show_thumbnail(bot, update):
-    glodal thumb_image_path
+    global thumb_image_path
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
