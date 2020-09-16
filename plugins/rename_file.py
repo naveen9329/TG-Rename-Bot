@@ -128,6 +128,7 @@ async def rename_doc(bot, update):
                     c_time
                 )
             )
+            stop_time = time.time() + 20
             try:
                 os.remove(new_file_name)
                 os.remove(thumb_image_path)
@@ -151,3 +152,5 @@ except:
            chat_id=update.chat.id,
            text="Join My Channel To Use This Bot"
         )
+While stop_time > time.time():
+     await asyncio.sleep(5)
