@@ -156,5 +156,5 @@ async def show_thumbnail(bot, update):
         )
         return
     if update.from_user.id not in Config.BANNED_USERS:
-         await bot.send_photo(photo=thumb_image_path)
+         await bot.send_photo(chat_id=update.chat.id, photo=thumb_image_path)
 
