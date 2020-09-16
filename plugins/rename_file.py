@@ -144,6 +144,17 @@ async def rename_doc(bot, update):
             text=Translation.REPLY_TO_DOC_FOR_RENAME_FILE,
             reply_to_message_id=update.message_id
         )
-@pyrogram.Client.on_message(pyrogram.Filters.command(["thumd"]))
-async def rename(bot, update): 
-   await bot.send_message(chat_id=update.chat.id, text="j")
+    return thumb_image_path
+@pyrogram.Client.on_message(pyrogram.Filters.command(["showthumbnail"]))
+async def show_thumbnail(bot, update):
+    glodal thumb_image_path
+    if update.from_user.id in Config.BANNED_USERS:
+        await bot.delete_messages(
+            chat_id=update.chat.id,
+            message_ids=update.message_id,
+            revoke=True
+        )
+        return
+    if update.from_user.id not in Config.BANNED_USERS:
+         await bot.send_photo(photo=thumb_image_path)
+
