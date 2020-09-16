@@ -34,6 +34,7 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
+ global stop_time
  if stop_time > time.time():
            await update.reply_text("please wait")
  if stop_time < time.time():
