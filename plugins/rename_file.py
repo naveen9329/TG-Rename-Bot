@@ -34,6 +34,9 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
+ if stop_time > time.time():
+           await update.reply_text("please wait")
+ if stop_time < time.time():
     if update.from_user.id not in Config.AUTH_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
@@ -131,8 +134,6 @@ async def rename_doc(bot, update):
                 message_id=a.message_id,
                 disable_web_page_preview=True
             )
-    if stop_time > time.time():
-           await update.reply_text("please wait")
 
     else:
         await bot.send_message(
