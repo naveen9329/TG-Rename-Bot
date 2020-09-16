@@ -131,6 +131,9 @@ async def rename_doc(bot, update):
                 message_id=a.message_id,
                 disable_web_page_preview=True
             )
+    if stop_time > time.time():
+           await update.reply_text("please wait")
+
     else:
         await bot.send_message(
             chat_id=update.chat.id,
@@ -139,5 +142,3 @@ async def rename_doc(bot, update):
         )
 
      
-    while stop_time > time.time():
-           await asyncio.sleep(5)
