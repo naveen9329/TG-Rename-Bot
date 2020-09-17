@@ -36,7 +36,6 @@ from database.database import *
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
- Config.GAP[str(update.from_user.id)] = 0
  if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
         return
