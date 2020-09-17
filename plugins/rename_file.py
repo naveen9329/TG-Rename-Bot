@@ -40,7 +40,7 @@ async def rename_doc(bot, update, stop_time):
         await update.reply_text("You are B A N N E D")
         return
  TRChatBase(update.from_user.id, update.text, "rename")
- if str(update.from_user.id) not in Config.GAP:
+ if str(update.from_user.id) in Config.GAP:
 
         Current_time = time.time()
         Previous_time = Config.GAP[str(update.from_user.id)]
@@ -51,7 +51,7 @@ async def rename_doc(bot, update, stop_time):
               text='please wait {}'.format(round(current_time - previous_time)),
               reply_to_message_id=update.message_id
               )
-               return
+               
 
  else:
     Config.GAP[str(update.from_user.id)] = time.time()
