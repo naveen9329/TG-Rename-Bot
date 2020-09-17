@@ -35,7 +35,7 @@ from database.database import *
 
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
-async def rename_doc(bot, update, stop_time):
+async def rename_doc(bot, update):
  if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
         return
@@ -83,7 +83,7 @@ async def rename_doc(bot, update, stop_time):
                 c_time
             )
         )
-        return start_time
+        return
         if the_real_download_location is not None:
             try:
                 await bot.edit_message_text(
