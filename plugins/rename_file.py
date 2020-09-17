@@ -60,7 +60,7 @@ async def rename_doc(bot, update):
         )
         c_time = time.time()
         start_time = time.time()
-        await Config.time_member.append(update.from_user.id)
+        Config.time_member.append(update.from_user.id)
         the_real_download_location = await bot.download_media(
             message=update.reply_to_message,
             file_name=download_location,
