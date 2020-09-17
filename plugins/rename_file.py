@@ -51,7 +51,7 @@ async def rename_doc(bot, update, stop_time):
               text='please wait {}'.format(round(current_time - previous_time)),
               reply_to_message_id=update.message_id
               )
-              return
+               return
 
  else:
     Config.GAP[str(update.from_user.id)] = time.time()
@@ -155,24 +155,10 @@ async def rename_doc(bot, update, stop_time):
                 message_id=a.message_id,
                 disable_web_page_preview=True
             )
-            return stop_time
-             
+            
     else:
         await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.REPLY_TO_DOC_FOR_RENAME_FILE,
             reply_to_message_id=update.message_id
         )
- if update.from_user.id in Config.time_member:
-      await bot.send_message(chat_id=update.chat.id, text="""1 process is running currently. Please wait untill it complete after that there will be a time gap. So please this is only due to decreasing overload. 
-
-Please cooperate with us""")
- if update.from_user.id in Config.gap:
-    await bot.send_message(chat_id=updat.chat.id, text="""please wait {}. So please this is only due to decreasing overload. 
-
-Please cooperate with us""").format(stop_time - time.time())
-  
-global stop_time    
-if stop_time > time.time():
-  Config.gap.remove(update.from_user.id)
-  Config.time_member.remove(update.from_user.id)
