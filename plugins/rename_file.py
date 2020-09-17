@@ -143,7 +143,7 @@ async def rename_doc(bot, update):
                 message_id=a.message_id,
                 disable_web_page_preview=True
             )
-             return stop_time
+             
     else:
         await bot.send_message(
             chat_id=update.chat.id,
@@ -157,7 +157,9 @@ Please cooperate with us""")
  if update.from_user.id in Config.gap:
     await bot.send_message(chat_id=updat.chat.id, text="""please wait {}. So please this is only due to decreasing overload. 
 
-Please cooperate with us""").format(stop_time - time.time())
+Please cooperate with us""").format(stop_time - time.time()
+  )
+   return stop_time
 
 while stop_time > time.time():
   Config.gap.remove(update.from_user.id)
