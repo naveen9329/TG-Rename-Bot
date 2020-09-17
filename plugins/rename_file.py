@@ -39,7 +39,7 @@ async def rename_doc(bot, update):
  if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
         return
-    TRChatBase(update.from_user.id, update.text, "rename")
+ TRChatBase(update.from_user.id, update.text, "rename")
  if update.from_user.id not in Config.time_member:
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
