@@ -159,5 +159,5 @@ Please cooperate with us""")
 Please cooperate with us""").format(stop_time - time.time())
 
 while stop_time > time.time():
-  await Config.gap.remove(update.from_user.id)
-  await Config.time_member.remove(update.from_user.id)
+  Config.gap.remove(update.from_user.id)
+  Config.time_member.remove(update.from_user.id)
