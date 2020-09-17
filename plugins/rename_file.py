@@ -36,10 +36,11 @@ from database.database import *
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
-    if update.from_user.id in Config.BANNED_USERS:
+ if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
         return
     TRChatBase(update.from_user.id, update.text, "rename")
+ if up
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
         if len(file_name) > 64:
@@ -58,6 +59,8 @@ async def rename_doc(bot, update):
             reply_to_message_id=update.message_id
         )
         c_time = time.time()
+        start_time = time.time()
+        await Config.time_member.append(update.from_user.id)
         the_real_download_location = await bot.download_media(
             message=update.reply_to_message,
             file_name=download_location,
@@ -127,9 +130,11 @@ async def rename_doc(bot, update):
                     c_time
                 )
             )
+            stop_time = time.time()
             try:
                 os.remove(new_file_name)
                 os.remove(thumb_image_path)
+                await Config.gap.append(update.from_user.id)
             except:
                 pass
             await bot.edit_message_text(
