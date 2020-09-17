@@ -143,6 +143,7 @@ async def rename_doc(bot, update):
                 message_id=a.message_id,
                 disable_web_page_preview=True
             )
+             return stop_time
     else:
         await bot.send_message(
             chat_id=update.chat.id,
