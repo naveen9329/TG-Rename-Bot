@@ -157,7 +157,7 @@ Please cooperate with us""")
  if update.from_user.id in Config.gap:
     await bot.send_message(chat_id=updat.chat.id, text="""please wait {}. So please this is only due to decreasing overload. 
 
-Please cooperate with us""").format(stop_time - time.time()
+Please cooperate with us""").format(stop_time - time.time())
   )
       return stop_time
 
