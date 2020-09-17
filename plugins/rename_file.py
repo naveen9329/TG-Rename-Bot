@@ -41,19 +41,18 @@ async def rename_doc(bot, update):
         return
  TRChatBase(update.from_user.id, update.text, "rename")
  if str(update.from_user.id) in Config.GAP:
-
-        Current_time = time.time()
-        Previous_time = Config.GAP[str(update.from_user.id)]
-        Config.GAP[str(update.from_user.id)] = time.time()
-        if round(Current_time - Previous_time) < 60:
-           await bot.send_message(
-              chat_id=update.chat.id,
-              text='please wait {}'.format(round(Previous_time - Current_time + 60)),
-              reply_to_message_id=update.message_id
+   Current_time = time.time()
+   Previous_time = Config.GAP[str(update.from_user.id)]
+   Config.GAP[str(update.from_user.id)] = time.time()
+   if round(Current_time - Previous_time) < 60:
+     await bot.send_message(
+     chat_id=update.chat.id,
+     text='please wait {}'.format(round(Previous_time - Current_time + 60)),
+     reply_to_message_id=update.message_id
               )
                
 
- else:
+   else:
     Config.GAP[str(update.from_user.id)] = time.time()
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
