@@ -161,7 +161,7 @@ Please cooperate with us""")
 
 Please cooperate with us""").format(stop_time - time.time())
       
-
+ global stop_time
  if stop_time > time.time():
   Config.gap.remove(update.from_user.id)
   Config.time_member.remove(update.from_user.id)
