@@ -153,7 +153,7 @@ async def rename_doc(bot, update):
             reply_to_message_id=update.message_id
         )
  if update.from_user.id in Config.time_member:
-      await bot.send_message(chat_id=updat.chat.id, text="""1 process is running currently. Please wait untill it complete after that there will be a time gap. So please this is only due to decreasing overload. 
+      await bot.send_message(chat_id=update.chat.id, text="""1 process is running currently. Please wait untill it complete after that there will be a time gap. So please this is only due to decreasing overload. 
 
 Please cooperate with us""")
  if update.from_user.id in Config.gap:
