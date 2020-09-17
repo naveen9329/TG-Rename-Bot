@@ -48,7 +48,7 @@ async def rename_doc(bot, update):
         if round(Current_time - Previous_time) < 60:
            await bot.send_message(
               chat_id=update.chat.id,
-              text='please wait {}'.format(round(Current_time - Previous_time)),
+              text='please wait {}'.format(round(Previous_time - Current_time + 60)),
               reply_to_message_id=update.message_id
               )
                
