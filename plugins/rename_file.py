@@ -131,7 +131,8 @@ async def rename_doc(bot, update):
                     c_time
                 )
             )
-            global stop_time = time.time() + 60
+            global stop_time
+            stop_time = time.time() + 60
             try:
                 os.remove(new_file_name)
                 os.remove(thumb_image_path)
