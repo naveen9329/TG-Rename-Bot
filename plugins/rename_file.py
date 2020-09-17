@@ -71,6 +71,7 @@ async def rename_doc(bot, update):
                 c_time
             )
         )
+        return start_time
         if the_real_download_location is not None:
             try:
                 await bot.edit_message_text(
@@ -143,6 +144,7 @@ async def rename_doc(bot, update):
                 message_id=a.message_id,
                 disable_web_page_preview=True
             )
+            return stop_time
              
     else:
         await bot.send_message(
