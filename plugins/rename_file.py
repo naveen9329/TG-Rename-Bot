@@ -161,7 +161,8 @@ Please cooperate with us""")
     await bot.send_message(chat_id=updat.chat.id, text="""please wait {}. So please this is only due to decreasing overload. 
 
 Please cooperate with us""").format(stop_time - time.time())
-      
- if stop_time > time.time():
+  
+global stop_time    
+if stop_time > time.time():
   Config.gap.remove(update.from_user.id)
   Config.time_member.remove(update.from_user.id)
