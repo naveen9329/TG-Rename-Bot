@@ -41,7 +41,7 @@ async def rename_doc(bot, update):
         await update.reply_text("You are B A N N E D")
         return
  TRChatBase(update.from_user.id, update.text, "rename")
- if str(update.from_user.id) in Config.GAP:
+ if str(update.from_user.id) not in Config.BANNED_USERS:
    Current_time = time.time()
    Previous_time = Config.GAP[str(update.from_user.id)]
    Config.GAP[str(update.from_user.id)] = time.time()
