@@ -45,10 +45,10 @@ async def rename_doc(bot, update):
         Current_time = time.time()
         Previous_time = Config.GAP[str(update.from_user.id)]
         Config.GAP[str(update.from_user.id)] = time.time()
-        if round(current_time - previous_time) < 60:
+        if round(Current_time - Previous_time) < 60:
            await bot.send_message(
               chat_id=update.chat.id,
-              text='please wait {}'.format(round(current_time - previous_time)),
+              text='please wait {}'.format(round(Current_time - Previous_time)),
               reply_to_message_id=update.message_id
               )
                
@@ -146,7 +146,6 @@ async def rename_doc(bot, update):
             try:
                 os.remove(new_file_name)
                 os.remove(thumb_image_path)
-                await Config.gap.append(update.from_user.id)
             except:
                 pass
             await bot.edit_message_text(
