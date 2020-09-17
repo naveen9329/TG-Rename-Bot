@@ -40,7 +40,21 @@ async def rename_doc(bot, update, stop_time):
         await update.reply_text("You are B A N N E D")
         return
  TRChatBase(update.from_user.id, update.text, "rename")
- if update.from_user.id not in Config.time_member:
+ if str(update.from_user.id) not in Config.GAP:
+
+        Current_time = time.time()
+        Previous_time = Config.GAP[str(update.from_user.id)]
+        Config.GAP[str(update.from_user.id)] = time.time()
+        if round(current_time - previous_time) < 60:
+           await bot.send_message(
+              chat_id=update.chat.id,
+              text='please wait {}'.format(round(current_time - previous_time)),
+              reply_to_message_id=update.message_id
+              )
+              return
+
+ else:
+    Config.GAP[str(update.from_user.id)] = time.time()
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
         if len(file_name) > 64:
@@ -59,8 +73,6 @@ async def rename_doc(bot, update, stop_time):
             reply_to_message_id=update.message_id
         )
         c_time = time.time()
-        start_time = time.time()
-        Config.time_member.append(update.from_user.id)
         the_real_download_location = await bot.download_media(
             message=update.reply_to_message,
             file_name=download_location,
@@ -131,8 +143,6 @@ async def rename_doc(bot, update, stop_time):
                     c_time
                 )
             )
-            global stop_time
-            stop_time = time.time() + 60
             try:
                 os.remove(new_file_name)
                 os.remove(thumb_image_path)
