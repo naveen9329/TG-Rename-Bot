@@ -40,7 +40,7 @@ async def rename_doc(bot, update):
         await update.reply_text("You are B A N N E D")
         return
     TRChatBase(update.from_user.id, update.text, "rename")
- if up
+ if update.from_user.id not in Config.time_member:
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
         if len(file_name) > 64:
@@ -130,7 +130,7 @@ async def rename_doc(bot, update):
                     c_time
                 )
             )
-            stop_time = time.time()
+            stop_time = time.time() + 60
             try:
                 os.remove(new_file_name)
                 os.remove(thumb_image_path)
@@ -149,3 +149,15 @@ async def rename_doc(bot, update):
             text=Translation.REPLY_TO_DOC_FOR_RENAME_FILE,
             reply_to_message_id=update.message_id
         )
+ if update.from_user.id in Config.time_member:
+      await bot.send_message(chat_id=updat.chat.id, text="""1 process is running currently. Please wait untill it complete after that there will be a time gap. So please this is only due to decreasing overload. 
+
+Please cooperate with us""")
+ if update.from_user.id in Config.gap:
+    await bot.send_message(chat_id=updat.chat.id, text="""please wait {}. So please this is only due to decreasing overload. 
+
+Please cooperate with us""").format(stop_time - time.time())
+
+while stop_time > time.time():
+  await Config.gap.remove(update.from_user.id)
+  await Config.time_member.remove(update.from_user.id)
