@@ -131,7 +131,7 @@ async def rename_doc(bot, update):
                     c_time
                 )
             )
-            stop_time = time.time() + 60
+            global stop_time = time.time() + 60
             try:
                 os.remove(new_file_name)
                 os.remove(thumb_image_path)
@@ -161,7 +161,6 @@ Please cooperate with us""")
 
 Please cooperate with us""").format(stop_time - time.time())
       
- global stop_time
  if stop_time > time.time():
   Config.gap.remove(update.from_user.id)
   Config.time_member.remove(update.from_user.id)
